@@ -9,7 +9,11 @@ const nextConfig = {
   experimental: {
     serverComponentsExternalPackages: ['sqlite3', 'bcryptjs']
   },
-  output: 'standalone'
+  output: 'standalone',
+  // Optimize for Vercel deployment
+  swcMinify: true,
+  compress: true,
+  poweredByHeader: false
 }
 
 module.exports = nextConfig
