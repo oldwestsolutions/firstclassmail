@@ -6,6 +6,10 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: false,
   },
+  experimental: {
+    serverComponentsExternalPackages: ['sqlite3', 'bcryptjs']
+  },
+  output: 'standalone'
 }
 
 module.exports = nextConfig
