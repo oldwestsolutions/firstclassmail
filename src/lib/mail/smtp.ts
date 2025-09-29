@@ -5,7 +5,7 @@ export class SMTPClient {
   private transporter: nodemailer.Transporter
 
   constructor(server: MailServer) {
-    this.transporter = nodemailer.createTransporter({
+    this.transporter = nodemailer.createTransport({
       host: server.smtpHost,
       port: server.smtpPort,
       secure: server.smtpPort === 465,
